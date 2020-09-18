@@ -1,0 +1,50 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema",
+	"$id": "http://example.com/example.json",
+	"type": "object",
+	"title": "Schema",
+	"description": "Basic Structure For Ethereum Token",
+	"default": {},
+	"examples": [
+		{
+			"name": "Thirm",
+			"symbol": "THRM",
+			"decimals": 18,
+			"website": "https://thirm.com"
+		}
+	],
+	"required": ["name", "symbol", "website"],
+	"properties": {
+		"name": {
+			"$id": "#/properties/name",
+			"type": "string",
+			"title": "Token Name",
+			"description": "Token Name",
+			"default": "",
+			"examples": ["Thirm Nano", "Thirm Bitcoin"]
+		},
+		"symbol": {
+			"$id": "#/properties/symbol",
+			"type": "string",
+			"title": "Token Symbol",
+			"description": "Token Symbol",
+			"default": "",
+			"examples": ["tNANO", "tBTC"]
+		},
+		"decimals": {
+			"default": 18,
+			"description": "Decimals",
+			"examples": [18],
+			"title": "Decimals In Token"
+		},
+		"website": {
+			"$id": "#/properties/website",
+			"type": "string",
+			"title": "Token Website",
+			"description": "Any Link For Token Homepage",
+			"default": "",
+			"examples": ["https://google.com"]
+		}
+	},
+	"additionalProperties": true
+}
